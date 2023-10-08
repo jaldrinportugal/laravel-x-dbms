@@ -16,7 +16,6 @@ return new class extends Migration
             $table->string('student_info');
             $table->string('reqirements');
             $table->string('certificate_of_enrollment');
-            
         });
     }
 

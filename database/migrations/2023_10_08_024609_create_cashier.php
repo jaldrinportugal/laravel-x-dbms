@@ -12,13 +12,13 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('cashier', function (Blueprint $table){
-            $table->increments('cashier_id');
+            $table->integer('cashier_id');
             $table->unsignedInteger('list_of_course');
             $table->foreign('list_of_course')->references('list_of_courses')->on('registrar');
             $table->string('enrollment_form');
             $table->string('state_of_account');
             $table->string('receipt');
-            $table->string('certificate_of_enrollment');
+            $table->increments('certificate_of_enrollment');
         });
     }
 
